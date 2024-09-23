@@ -32,3 +32,5 @@ Website yang saya buat ini merupakan sebuah buku tamu digital yang memiliki pena
   - Email: `tamu@gmail.com`
   - Password: `123456`
   
+### ERD
+![ERD Diagram](https://github.com/username/repository_name/raw/main/erd.png)
