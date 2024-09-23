@@ -33,4 +33,4 @@ Website yang saya buat ini merupakan sebuah buku tamu digital yang memiliki pena
   - Password: `123456`
   
 ### ERD
-![ERD Diagram](https://github.com/username/repository_name/raw/main/erd.png)
+![ERD Diagram](https://github.com/Bimz258/tugas-ukk/raw/main/erd.png)
