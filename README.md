@@ -36,4 +36,40 @@ Website yang saya buat ini merupakan sebuah buku tamu digital yang memiliki pena
 ![ERD Diagram](https://github.com/Bimz258/tugas-ukk/raw/main/erd.png)
 
 ### UML Diagram Case
+![ERD Diagram](https://github.com/Bimz258/tugas-ukk/raw/main/uml.png)
+
+## Teknologi Yang Digunakan
+- **Laravel 10**
+- **Bootstrap 5**
+
+## Persyaratan Untuk Melakukan Instalasi
+- **PHP 8.1.0** & Web Server (Apache)
+- **Database**: MariaDB
+- **Web Browser**: Chrome, atau Firefox
+
+## Instalasi
+
+1. Clone Repositori:
+   ```bash
+   git clone https://github.com/FajrilMaulid/ukk-perpus.git
+   cd ukk-perpus
+
+2.Install dependencies:
+composer install
+
+3.Copy file .env:
+cp .env.example .env
+
+4.Konfigurasi Database pada file .env:
+Ganti Database Name Menjadi Nama Sql
+
+5.Melakukan Migrasi dan menyambungkan storage:
+php artisan key:generate
+php artisan storage:link
+php artisan migrate --seed
+
+6.Mulai Situs Web:
+php artisan serve
+
+### Web Dibuat Oleh Bima Putra Wahyudi
 
