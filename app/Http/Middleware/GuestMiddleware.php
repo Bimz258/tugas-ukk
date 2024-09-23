@@ -5,16 +5,15 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Illuminate\Support\Facades\Auth;
 
-class iniLogin
+class GuestMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check()) {
-            return $next($request);
+        if (auth()->check() && auth()->user()->role === 'user') {
+            return $next($request); // Izinkan akses
         }
-        return redirect('sesi')->withErrors('Silahkan Masukan Username Dan Password Yang Valid');
+
+        return redirect('/sesi')->withErrors(['error' => 'Akses ditolak.']);
     }
 }
-

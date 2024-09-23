@@ -9,15 +9,13 @@ use Illuminate\Support\Facades\Auth;
 
 class iniTamu
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::check()){
-            return redirect('tamu')->with('success','Anda Berhasil Login Anda Harus Logout Terlebih Dahulu');
+        if (Auth::check()) {
+            if (Auth::user()->role === 'admin') {
+                return redirect('admin')->with('success', 'Anda sudah login sebagai admin.');
+            }
+            return redirect('guest')->with('success', 'Anda sudah login sebagai user.');
         }
         return $next($request);
     }

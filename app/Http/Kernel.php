@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
 
         'iniLogin' => \App\Http\Middleware\iniLogin::class,
         'iniTamu' => \App\Http\Middleware\iniTamu::class,
+        'GuestMiddleware' => \App\Http\Middleware\GuestMiddleware::class,
     ];
 }

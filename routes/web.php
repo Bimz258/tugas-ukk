@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TamuController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\GuestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,19 @@ use App\Http\Controllers\SessionController;
 
 Route::get('/', function () {
     return view('dashboard');
-})->name('dashboard') ->middleware('iniLogin');
+})->name('dashboard')->middleware('iniLogin');
 
 Route::resource('tamu',TamuController::class)->middleware('iniLogin');
 
 Route::get('/login',[SessionController::class,'index'])->middleware('iniTamu');
 Route::get('sesi',[SessionController::class,'index'])->middleware('iniTamu');
 Route::post('/sesi/login',[SessionController::class,'login'])->middleware('iniTamu');
-Route::get('/sesi/logout',[SessionController::class,'logout']);
+Route::get('/sesi/logout',[SessionController::class,'logout'])->middleware('iniLogin');
+
+Route::middleware(['GuestMiddleware'])->group(function () {
+    Route::get('/guest', [GuestController::class, 'index'])->name('guest.index');
+});
+
+
+
+
