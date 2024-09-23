@@ -34,3 +34,6 @@ Website yang saya buat ini merupakan sebuah buku tamu digital yang memiliki pena
   
 ### ERD
 ![ERD Diagram](https://github.com/Bimz258/tugas-ukk/raw/main/erd.png)
+
+### UML Diagram Case
+
