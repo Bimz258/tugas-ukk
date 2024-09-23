@@ -44,7 +44,7 @@ Website yang saya buat ini merupakan sebuah buku tamu digital yang memiliki pena
 
 ## Persyaratan Untuk Melakukan Instalasi
 - **PHP 8.1.0** & Web Server (Apache)
-- **Database**: MariaDB
+- **Database**: phpMyAdmin
 - **Web Browser**: Chrome, atau Firefox
 
 ## Instalasi
@@ -55,20 +55,25 @@ Website yang saya buat ini merupakan sebuah buku tamu digital yang memiliki pena
    cd ukk-perpus
 
 2.Install dependencies:
+ ```bash
 composer install
 
 3.Copy file .env:
+ ```bash
 cp .env.example .env
 
 4.Konfigurasi Database pada file .env:
+ ```bash
 Ganti Database Name Menjadi Nama Sql
 
 5.Melakukan Migrasi dan menyambungkan storage:
+ ```bash
 php artisan key:generate
 php artisan storage:link
 php artisan migrate --seed
 
 6.Mulai Situs Web:
+ ```bash
 php artisan serve
 
 ### Web Dibuat Oleh Bima Putra Wahyudi
