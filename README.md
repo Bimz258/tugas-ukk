@@ -36,7 +36,7 @@ Website yang saya buat ini merupakan sebuah buku tamu digital yang memiliki pena
 ![ERD Diagram](https://github.com/Bimz258/tugas-ukk/raw/main/erd.png)
 
 ### UML Diagram Case
-![ERD Diagram](https://github.com/Bimz258/tugas-ukk/raw/main/uml.png)
+![ERD Diagram](https://github.com/Bimz258/tugas-ukk/raw/main/uml1.png)
 
 ## Teknologi Yang Digunakan
 - **Laravel 10**
