@@ -51,8 +51,8 @@ Website yang saya buat ini merupakan sebuah buku tamu digital yang memiliki pena
 
 1. Clone Repositori:
    ```bash
-   git clone https://github.com/FajrilMaulid/ukk-perpus.git
-   cd ukk-perpus
+   git clone https://github.com/Bimz258/tugas-ukk
+   cd tugas-ukk
 
 2.Install dependencies:
 composer install
